@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 mx-auto">
+                <div class="card">
+                    <div class="card-body text-center">
+                      <input id="inputNumber" type="number" class="form-control"/>
+                        <button id="guessButton" class="btn btn-primary text-center" onclick="guessNumber()">Tahmin Et</button>
+                    </div>
+                    <div class="card-footer">
+                        <span id="infoText"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-6 text-center">
+                <div class="card">
+                    <div class="card-body">
+                       <h2>Tahmin Hak</h2>
+                       <h1 id="remAttempts"></h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Seviye</h2>
+                        <h1 id="level"></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3 mx-auto">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 id="timeLimit"></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 mx-auto">
+                <div class="card">
+                    <div class="card-body text-center">
+                        <h3 id="secretNumber"></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <ul>
+            <li>Uygulama çlıştırıldığında arkağlanda 1 ile 10 arasında rastgele bir sayı tutulacak</li>
+            <li>Saniye 30'dan geriye sayacak</li>
+            <li>Kullanıcı bir tahminde bulunnacak
+                <ol>
+                    <li>Eğer kullanıcının tahmini tutulan değerden küçük ise bilgilendirme mesajı olarak "lütfen daha büyük bir değer girin" yazacak. Tahmin hak bir kez azaltılacak</li>
+                    <li>Eğer kullanıcının tahmini tutulan değerden büyük ise bilgilendirme mesajı olarak "lütfen daha küçük bir değer girin" yazacak. Tahmin hak bir kez azaltılacak</li>
+                    <li>Eğer kullanıcı doğru tahminde bulunmuşsa tahmin hak <strong>5</strong> olacak seviye <strong>2</strong> olacak. Arından 1 ile 20 arasında sayı tutulacak</li>
+                    <li>Eğer saniye 0 olursa input ve button pasif hale getirilecek. (isterseniz sayfadan kaldıradabilirsiniz.)</li>
+                </ol>
+
+            </li>
+        </ul>
+    </div>
+    <script src="js/tahmin.js"></script>
+</body>
+</html>
